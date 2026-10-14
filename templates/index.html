@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedVision AI | Chest X-Ray Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <div class="brand-mark">✚</div>
+      <div>
+        <strong>MedVision<span>AI</span></strong>
+        <small>Medical Imaging Intelligence</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#analyze">AI Detection</a>
+      <a href="#how">How It Works</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="nav-button" href="#analyze">Analyze X-Ray</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">AI-POWERED MEDICAL IMAGING</div>
+        <h1>Intelligent analysis of <span>chest X-rays.</span></h1>
+        <p>
+          A deep-learning prototype for pneumonia screening from chest
+          radiographs, with visual explanations powered by Grad-CAM.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#analyze">Start Analysis <span>→</span></a>
+          <a class="secondary-link" href="#how">Explore the technology</a>
+        </div>
+        <div class="trust-row">
+          <div><b>CNN</b><span>Deep Learning</span></div>
+          <div><b>Grad-CAM</b><span>Explainable AI</span></div>
+          <div><b>224×224</b><span>Image Input</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="scan-card">
+          <div class="scan-header">
+            <span><i></i> AI SCAN PREVIEW</span>
+            <span>LIVE DEMO</span>
+          </div>
+          <div class="lung-art">
+            <div class="lung left"></div>
+            <div class="spine"></div>
+            <div class="lung right"></div>
+            <div class="scan-line"></div>
+          </div>
+          <div class="scan-footer">
+            <span>CHEST RADIOGRAPH</span>
+            <span class="status">● SYSTEM READY</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="analyze" class="section analyze-section">
+      <div class="section-heading">
+        <div class="eyebrow">AI DETECTION</div>
+        <h2>Analyze a chest X-ray</h2>
+        <p>Upload an image and receive a model prediction with an explainability visualization.</p>
+      </div>
+
+      <div class="analysis-grid">
+        <div class="upload-panel">
+          <form id="uploadForm">
+            <label class="drop-zone" id="dropZone">
+              <input id="imageInput" name="image" type="file" accept="image/png,image/jpeg,image/jpg" hidden>
+              <div class="upload-icon">↑</div>
+              <h3>Drop your X-ray here</h3>
+              <p>or click to browse</p>
+              <small>PNG or JPG • Maximum 10 MB</small>
+            </label>
+            <div id="fileName" class="file-name"></div>
+            <button class="analyze-button" type="submit">Analyze X-Ray <span>→</span></button>
+          </form>
+          <div class="privacy-note">🔒 Images are processed for this demo and should not be used as a substitute for clinical assessment.</div>
+        </div>
+
+        <div class="result-panel" id="resultPanel">
+          <div class="result-empty">
+            <div class="result-icon">✦</div>
+            <h3>Your analysis will appear here</h3>
+            <p>Upload a chest X-ray to see the prediction, confidence and Grad-CAM visualization.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="section-heading centered">
+        <div class="eyebrow">WORKFLOW</div>
+        <h2>How the system works</h2>
+        <p>A simple pipeline from medical image input to an interpretable AI output.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><h3>Upload</h3><p>Select a chest X-ray in PNG or JPG format.</p></div>
+        <div class="step"><span>02</span><h3>Preprocess</h3><p>The image is resized and normalized for the CNN.</p></div>
+        <div class="step"><span>03</span><h3>Predict</h3><p>The trained CNN estimates the probability of pneumonia.</p></div>
+        <div class="step"><span>04</span><h3>Explain</h3><p>Grad-CAM creates a visual map of influential regions.</p></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div>
+        <div class="eyebrow">ABOUT THE PROJECT</div>
+        <h2>Deep learning with explainability.</h2>
+        <p>
+          MedVision AI is a college deep-learning project demonstrating how
+          convolutional neural networks can be applied to chest X-ray image
+          classification. Grad-CAM is included to make the model output easier
+          to inspect.
+        </p>
+      </div>
+      <div class="tech-card">
+        <div><b>TensorFlow / Keras</b><span>Model development</span></div>
+        <div><b>Python</b><span>Backend & inference</span></div>
+        <div><b>CNN</b><span>Image classification</span></div>
+        <div><b>Grad-CAM</b><span>Explainable AI</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>MedVisionAI</strong> · Medical Imaging Intelligence</div>
+    <div>Educational / Research Prototype · Not a medical diagnosis</div>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
