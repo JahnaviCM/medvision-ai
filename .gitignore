@@ -1,0 +1,7 @@
+models/*.keras
+static/uploads/*
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
